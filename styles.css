@@ -1,0 +1,35 @@
+	/*Source: https://www.w3schools.com/css/css_navbar.asp*/
+		body {
+			margin: 0;
+			padding: 0;
+			background-color: #FFFAF0;
+		}
+
+		h2, p {
+			margin: 10px;	
+		}
+
+		ul {
+		  list-style-type: none;
+		  margin: 0;
+		  padding: 0;
+		  overflow: hidden;
+		  background-color: #333333;
+		}
+
+		ul li {
+		  float: left;
+		}
+
+		ul li a {
+		  display: block;
+		  color: white;
+		  font-size: 20px;
+		  text-align: center;
+		  padding: 10px 112px;
+		  text-decoration: none;
+		}
+
+		ul li a:hover {
+		  background-color: #111111;
+		}
