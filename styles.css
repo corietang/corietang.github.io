@@ -33,3 +33,19 @@
 		ul li a:hover {
 		  background-color: #111111;
 		}
+		.belle {
+			color: black;
+			background-color: #DEB887;
+			width: 75%;
+			border-style: double;
+			border-width: 5px;
+			border-color: black;
+			padding: 20px;
+			margin: 20px;
+		}
+		.tableauinvisible {
+			border: 1px #FFFAF0;
+			border-collapse: collapse;
+			padding: 15px;
+			background-color: #FFFAF0;
+		}
