@@ -17,7 +17,7 @@
 		  background-color: #333333;
 		}
 
-		ul li {
+		.navbarhorizontal {
 		  float: left;
 		}
 
@@ -48,4 +48,5 @@
 			border-collapse: collapse;
 			padding: 15px;
 			background-color: #FFFAF0;
+
 		}
