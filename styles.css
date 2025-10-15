@@ -1,4 +1,4 @@
-	/*Source: https://www.w3schools.com/css/css_navbar.asp, permet de créer une bar de navigation*/
+/*Source: https://www.w3schools.com/css/css_navbar.asp, permet de créer une bar de navigation*/
 		body {
 			margin: 0;
 			padding: 0;
@@ -10,28 +10,31 @@
 		}
 
 		ul {
-		  list-style-type: none;
-		  margin: 0;
-		  padding: 0;
-		  overflow: hidden;
-		  background-color: #333333;
-		}
-
-		.navbarhorizontal {
-		  float: left;
+			list-style-type: none;
+			margin: 0;
+			padding: 0;
+			display: flex;
+			border: 1px solid #e7e7e7;
+			background-color: #f3f3f3;
+			position: fixed;
+			top: 0;
+			width: 100%;
 		}
 
 		ul li a {
-		  display: block;
-		  color: white;
-		  font-size: 20px;
-		  text-align: center;
-		  padding: 10px 112px;
-		  text-decoration: none;
+			display: block;
+			color: #666666;
+			padding: 14px 16px;
+			text-decoration: none;
+			font-size: 20px;
 		}
 
-		ul li a:hover {
-		  background-color: #111111;
+		ul li a:hover:not(.active) {
+			background-color: #dddddd;
+		}
+
+		ul li a.active {
+			background-color: #04AA6D;
 		}
 		.belle {
 			color: black;
@@ -48,5 +51,4 @@
 			border-collapse: collapse;
 			padding: 15px;
 			background-color: #FFFAF0;
-
 		}
