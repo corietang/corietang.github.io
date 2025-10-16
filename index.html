@@ -1,71 +1,117 @@
 <!-- Auteur: Corie Tang -->
 
-<!DOCTYPE html>
-
 <html>
 
 	<head>
 		<meta charset="UTF-8">
-		<title>Index</title>
+		<a name="debut"><title>Ma biography</title></a>
 		<link rel="stylesheet" href="styles.css">
 		<style>
-		/*source:https://www.w3schools.com/css/css_image_gallery.asp, permet de créer une gallery d'image*/
-    	div.gallery {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: flex-start;  
-      }
-      
-      div.gallery-item {
-        margin: 5px;
-        border: 1px solid #ccc;
-        width: 32%;
-      }
-      
-      div.gallery-item:hover {
-        border: 1px solid #777;
-      }
-      
-      div.gallery-item img {
-        width: 100%;
-        height: auto;
-      }
-      
-      div.gallery-item div.desc {
-        padding: 15px;
-        text-align: center;
-      }
-      </style>
-      </head>
-      <body>
-	  <h1>Acceuil<h1>
-      <!--source:https://www.w3schools.com/css/css_image_gallery.asp -->
-      <div class="gallery">
-      
-      <div class="gallery-item">
-        <a href="poeme.html">
-          <img src="image/poeme.jpg" alt="Photo de Jesus qui porte une femme" width="600" height="400">
-        </a>
-        <div class="desc">Mon poème préféré</div>
-      </div>
-      
-      <div class="gallery-item">
-        <a href="voyage.html">
-          <img src="https://unsacsurledos.com/wp-content/uploads/2024/11/hakone-japon.jpg" alt="Image du japon" width="600" height="400">
-        </a>
-        <div class="desc">Mon voyage prafait</div>
-      </div>
-      
-      <div class="gallery-item">
-        <a href="biographie.html">
-          <img src="image/Firebird.jpg" alt="image d'un saut firebird" width="600" height="400">
-        </a>
-        <div class="desc">Ma biographie</div>
-      </div>
-      
-      </div>
-      
-      </body>
-
+			body {
+				font-size: 1.9vw;
+				margin: 2%;
+			}
+		</style>
+	</head>
+	<body style="display: block;"> 
+		<ul style= "margin: 0; padding: 0;">
+			<li><a href="index.html">Accueil</a>
+			<li><a href="peome.html">Poème préféré</a>
+			<li><a href="voyage.html">Voyage parfait</a>
+			<li><a class="active" href="biographie.html">Biographie</a>
+		</ul>
+		<br>
+		<h1>Ma biographie</h1>
+		<center><ol>
+			<li><a href="#nom">Qui je suis</a>
+			<li><a href="#lien">Liens préférés</a>
+			<li><a href="#niveau">Niveau de compétences technologique</a>
+		</ol></center>
+		<center><a name="nom"><img src="image/Firebird.jpg" width="75%"/></a></center>
+		<center><p class="belle"> Mon pseudo nom est Mulan, je suis une jeune fille déterminée, loyale et courageuse, qui a décidé de prendre la place de mon père dans l'armée pour le protéger. Je suis à la fois un esprit libre et une personne pleine de doutes, ce qui me rend imparfaite et attachante. Bien que je sois souvent maladroite et que j'ai du mal à me conformer aux traditions, je m'efforce de trouver ma place et de prouver ma valeur.</center></p>
+		<a name="lien"><h2>Mes trois site préférées sont:</h2></a>
+		<ol>
+				<li><a href="#sporcle">Sporcle </a>
+				<li><a href="#nyt">New York Times Games </a>
+				<li><a href="#useless">The Useless Web </a>
+		</ol>
+				<a name="sporcle"><h2><a href="https://www.sporcle.com/"target="_blank">Sporcle</h2></a>
+				<center><img src="https://d31xsmoz1lk3y3.cloudfront.net/images/big/default.png?v=130001" alt="Image du logo sporcle" width="75%"/></center>
+				<p>Sporcle est une plateforme de quiz en ligne où vous pouvez jouez à des millions de quiz créés par les utilisateurs sur n'importe quel sujet, créez et partagez vos propres quiz, accédez quotidiennement au contenu et aux défis et participez à des événements de quiz en direct. Mon quiz préféré est celui sur<a href="https://fr.sporcle.com/games/g/worldflags"target="_blank"> les drapeaux du monde</a>.  Clique sur le lien pour jouer.</p>
+				<br>
+				<a name="nyt"><h2><a href="https://www.nytco.com/games/"target="_blank">New York Times Games</h2></a>
+				<center><img src="https://www.nytimes.com/games-assets/v2/assets/apps/Games_Social_Card.png" alt="Image du logo the New York Times Games" width="75%"/></center>
+				<p>NYT Games est une collection de jeux de mots et de logique du New York Times, proposant des défis quotidiens comme le Crossword, le Wordle, et le Sudoku. Lancée officiellement en 2014, la plateforme s'est étendue pour inclure d'autres jeux populaires comme Spelling Bee, Connections, Strands et Pips. Elle est disponible via l'application et le site web, nécessitant un abonnement pour un accès complet à l'ensemble des jeux.  Mon jeu préféré est<a href="https://www.nytimes.com/puzzles/sudoku"target="_blank"> le sudoku</a>.  Clique sur le lien pour jouer.</p>
+				<br>
+				<a name="useless"><h2><a href="https://theuselessweb.com/"target="_blank">The Useless Web</h2></a>
+				<center><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSFMKehTvlc_WZVpRrul4rey7gkjlsSjo8C8Q&s" alt="Image du useless web" width="75%"/></center>
+				<p>The Useless Web est une plateforme qui redirige les utilisateurs vers un site web aléatoire, souvent absurde et sans fonction utilitaire apparente. Son but est d'offrir un divertissement fugace en explorant le côté décalé et humoristique d'Internet, présentant une compilation de sites étranges, amusants, artistiques ou simplement inutiles.</p>
+				<br>
+		<h2>Niveau de compétence technologique</h2>
+		<a name="niveau"><table border = "2" style="width: 100%; text-align: center; border-collapse: collapse;">
+			<thead>
+				<tr>
+					<th rowspan=2 style="width: 50%">Compétences technologique</th>
+					<th colspan=4>Niveau de compétences</th>
+				</tr>
+				<tr>
+					<th>Débutant</th>
+					<th>Compétent</th>
+					<th>Expert</th>
+					<th>Maître</th>
+			</thead>
+			<tbody>
+				<tr>
+					<td>La résolution de problème - Organigramme et pseudo-code</td>
+					<td></td>
+					<td></td>
+					<td>x</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>Algorithme</td>
+					<td></td>
+					<td></td>
+					<td>x</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>Les composants du système informatique</td>
+					<td>x</td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>Les périphériques</td>
+					<td></td>
+					<td>x</td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>La sécurité informatique</td>
+					<td></td>
+					<td></td>
+					<td>x</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>L'utilisation de l'HTML et CSS</td>
+					<td></td>
+					<td></td>
+					<td>x</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>Le javascript</td>
+					<td>x</td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+			</tbody>
+		</table></a>
+		<a href="#debut"><img src="image/fleche.png" alt="Image d'une fleche" width="3%"/></a>
+	</body>
 </html>
-
