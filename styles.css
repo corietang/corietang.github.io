@@ -1,7 +1,6 @@
 	/*Source: https://www.w3schools.com/css/css_navbar.asp, permet de créer une bar de navigation*/
 		body {
-			margin: 0;
-			padding: 0;
+			margin: 2%;
 			background-color: #FFFAF0;
 		}
 
@@ -51,4 +50,24 @@
 			border-collapse: collapse;
 			padding: 15px;
 			background-color: #FFFAF0;
+		}
+		ol {
+		  list-style-type: none;
+		  margin: 0;
+		  padding: 0;
+		  width: 50%;
+		  background-color: #f1f1f1;
+		}
+
+		li a {
+		  display: block;
+		  color: black;
+		  padding: 8px 16px;
+		  text-decoration: none;
+		}
+
+		/* Change la couleur de l'arrière plan lorsqu'il hover*/
+		li a:hover {
+		  background-color: #555555;
+		  color: white;
 		}
