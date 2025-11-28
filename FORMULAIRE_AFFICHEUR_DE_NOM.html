@@ -2,34 +2,35 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>Modulo</title>
+  <title>Formulaire Afficheur de Nom</title>
 </head>
 <body>
-  <!-- Programme - Le modulo (%) -->
+  <!-- Programme - Formulaire Afficheur de Nom -->
   <form>
     <h1>Programme - Le modulo (%)</h1>
     <!-- textbox pour le nom de l'élève -->
     <label for="txtNom">Entre ton prénom: </label>
     <input type="text" id="txtNom"/>
     <br><br>
-        <!-- bouton pour soumettre le formulaire -->
-    <input type="button" id="btnSoumet" onclick="initiales()"  value="Affiche les initiales">
-    <br><br>
-    <div id="divAfficheInitiales">
-    </div>
+
     <label for="txtNomDuMilieu">Entre ton nom du milieu: </label>
     <input type="text" id="txtNomDuMilieu"/>
     <br><br>
+
     <label for="txtNomDeFamille">Entre ton nom de famille: </label>
     <input type="text" id="txtNomDeFamille"/>
     <br><br>
-
-    <br><br><br>
-    <!-- bouton pour soumettre le formulaire -->
-    <input type="button" id="btnSoumet" onclick="confirmeInscription()"  value="Calcul le modulo">
-    <!-- Création d'une section pour l'affichage des résultats -->
-    <div id="divAffiche">
+    <input type="button" id="btnSoumet" onclick="initiales()"  value="Affiche les initiales">
+    <br><br>
+    <div id="divAfficheInitiales">
+        <!-- bouton pour soumettre le formulaire -->
+    <input type="button" id="btnSoumet" onclick="nomComplet()"  value="Affiche les nom complet">
+    <br><br>
+    <div id="divAfficheNomComplet">
     </div>
+    <input type="button" id="btnSoumet" onclick="nomUtilisateur()"  value="Affiche nom d\’utilisateur">
+    <br><br>
+    <div id="divAfficheNomUtilisateur">
     <script>
         function initiales() {
             //Chercher les données dans le formulaire
@@ -37,17 +38,21 @@
                 let nomDuMilieu = (document.getElementById("txtNomDuMilieu").value).toLowerCase();
                 let nomDeFamille = (document.getElementById("txtNomDeFamille").value).toLowerCase();
                 let affiche = document.getElementById("divAfficheInitiales");
-
             //isole la première lettre de chaque nom pour créer ses initiales et le transforme en majescule
-            let initiales = (prenom[0]+"."+nomDuMilieu[0]+"."+nomDeFamille[0]+".").toUpperCase();
-
-            //combine tout les nom pour créer le nombre complet
+            let initiales = (nom[0]+"."+nomDuMilieu[0]+"."+nomDeFamille[0]+".").toUpperCase();
+            let message = "Initiales:  " + initiales;
+            //Afficher le message sur la page web
+            affiche.innerHTML = message;
+        }
+        function nomComplet() {
+            //Chercher les données dans le formulaire
+                let nom = (document.getElementById("txtNom").value).toLowerCase();
+                let nomDuMilieu = (document.getElementById("txtNomDuMilieu").value).toLowerCase();
+                let nomDeFamille = (document.getElementById("txtNomDeFamille").value).toLowerCase();
+                let affiche = document.getElementById("divAfficheNomComplet");
+            //isole la première lettre de chaque nom pour créer ses initiales et le transforme en majescule
             let nomComplet = prenom[0].toUpperCase() + prenom.slice(1)+" "+nomDuMilieu[0].toUpperCase() + nomDuMilieu.slice(1)+" "+nomDeFamille[0].toUpperCase() + nomDeFamille.slice(1);
-
-            //transform les initiales en minusclue et ajoute le dernier nom
-            let nomUtilisateur = (prenom[0]+nomDuMilieu[0]+nomDeFamille[0]).toLowerCase()+nomDeFamille.slice(1);
-            //Construire le message à afficher
-            let message = "Initiales:  " + initiales + "<br>Nom au complet:";
+            let message = "Nom au complet:  " + nomComplet;
             //Afficher le message sur la page web
             affiche.innerHTML = message;
         }
