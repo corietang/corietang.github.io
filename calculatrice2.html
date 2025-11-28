@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Calculatrice</title>
+</head>
+<body>
+  <!-- Programme - Le modulo (%) -->
+  <form>
+    <h1>Programme - La Calculatrice</h1>
+    <!-- textbox pour le nom de l'élève -->
+    <label for="num1">Entre un nombre:</label>
+    <input type="number" id="num1" style ="width: 5%;"/>
+    <br><br>
+    <label for="num2">Entre un deuxième nombre:</label>
+    <input type="number" id ="num2" style ="width: 5%;"/>
+    <br><br>
+    <!-- Checkbox pour les operation que tu veux utiliser -->
+
+    <label for="chkOperation">Langues parlées:</label><br>
+    <input type="checkbox" id="chkOperation" name="operation" value="%">Modulo<br>
+    <input type="checkbox" id="chkOperation" name="operation" value="+">Addition<br>
+    <input type="checkbox" id="chkOperation" name="operation" value="-">Soustraction<br>
+    <input type="checkbox" id="chkOperation" name="operation" value="*">Multiplication<br>
+    <input type="checkbox" id="chkOperation" name="operation" value="/">Division<br>
+    <input type="checkbox" id="chkOperation" name="operation" value="**">Exposant<br>
+
+    <br><br>
+    <!-- bouton pour soumettre le formulaire -->
+    <input type="button" id="btnSoumet" onclick="confirmeInscription()"  value="Soumettre le formulaire">
+    <!-- Création d'une section pour l'affichage des résultats -->
+    <br><br>
+    <div id="divAffiche">
+    </div>
+    <script>
+        function confirmeInscription() {
+            //Chercher les données dans le formulaire
+            let nombre1 = parseFloat(document.getElementById("num1").value);
+            let nombre2 = parseFloat(document.getElementById("num2").value);
+            let affiche = document.getElementById("divAffiche");
+            let modulo = nombre1%nombre2
+
+            //Pour déterminer lesquels des checkbox sont cochés
+            let checkOperation = document.getElementsByName("operation");
+            let operationChoisi = "";
+            let résultat =""
+            for (var i=0; i < checkOperation.length; i++) {
+              if (checkOperation[i].checked) {
+                operationChoisi = checkOperation[i].value;
+                switch (operationChoisi) {
+                  case "%": 
+                    let modulo = nombre1%nombre2
+                    résultat+="Le résultat du modulo entre " +nombre1+" et "+nombre2+" est "+modulo+". <br>"
+                    break;
+                  case "+": 
+                    let addition = nombre1+nombre2
+                    résultat+="La somme de l'addition entre " +nombre1+" et "+nombre2+" est "+addition+". <br>"
+                    break;
+                  case "-": 
+                    let soustraction = nombre1-nombre2
+                    résultat+="La diffrence de la soustraction entre " +nombre1+" et "+nombre2+" est "+soustraction+". <br>"
+                    break;     
+                  case "*": 
+                    let multiplication = nombre1*nombre2
+                    résultat+="Le produit de la multiplication entre " +nombre1+" et "+nombre2+" est "+multiplication+". <br>"
+                    break;  
+                  case "/": 
+                    let division = nombre1/nombre2
+                    résultat+="Le quotient de la division entre " +nombre1+" et "+nombre2+" est "+division+". <br>"
+                    break;     
+                  case "**": 
+                    let exposant = nombre1**nombre2
+                    résultat+="Le résultat de la multiplication répéter avec un base de " +nombre1+" et une puissance de "+nombre2+" est "+exposant+". <br>"                                             
+                }
+              }
+            }
+
+            //Afficher le message sur la page web
+            affiche.innerHTML = résultat;
+        }
+    </script>
+  </form>
+</body>
+</html>
